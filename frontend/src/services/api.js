@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = 'http://localhost:8001'; // Adjust if needed
+const BASE_URL = 'https://system-uzkq.onrender.com/'; // Adjust if needed
 
 const api = axios.create({
   baseURL: BASE_URL,
