@@ -9,7 +9,7 @@ const server = express();
 server.use(cors()).use(bodyParser.json());
 
 const corsOptions = {
-  origin: 'http://localhost:3000', // Change this to your frontend's origin
+  origin: 'https://system-ten-pink.vercel.app/', // Change this to your frontend's origin
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true, // Allow credentials if needed
 };

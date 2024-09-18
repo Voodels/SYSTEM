@@ -1,16 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
-import Tasks from './components/Tasks';
+
+import '@radix-ui/themes/styles.css';
+import Home from './pages/home';
+
 
 function App() {
   return (
-    <div className="App">
-      <h1>
-        SYSTEM
-      </h1>
+    <div>
       <div> 
-        <h2>Tasks</h2>
-        <Tasks/>
+        <Home/>
       </div>
     </div>
   );
