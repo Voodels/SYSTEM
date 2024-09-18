@@ -8,6 +8,13 @@ const { DbConnect } = require("./dbConnector");
 const server = express();
 server.use(cors()).use(bodyParser.json());
 
+const corsOptions = {
+  origin: 'http://localhost:3000', // Change this to your frontend's origin
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true, // Allow credentials if needed
+};
+
+
 // Middleware to log requests
 server.use((req, res, next) => {
     console.log(`Received request for: ${req.method} ${req.url}`);
@@ -22,7 +29,7 @@ server.get("/", (req, res) => {
 server.use("/", taskRouter);
 DbConnect();
 
-const PORT = process.env.PORT || 8001; // Use the port from .env or default to 8001
+const PORT = 8001; // Use the port from .env or default to 8001
 server.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
