@@ -9,14 +9,20 @@ const bentoItems = [
   { id: 'calendar', title: 'Calendar', icon: <PersonIcon />, component: <Text>Calendar Placeholder</Text> },
   { id: 'notes', title: 'Notes', icon: <GearIcon />, component: <Text>Notes Placeholder</Text> },
   { id: 'analytics', title: 'Analytics', icon: <BarChartIcon />, component: <Text>Analytics Placeholder</Text> },
+  { id: 'calendar', title: 'Calendar', icon: <PersonIcon />, component: <Text>Calendar Placeholder</Text> },
+  { id: 'notes', title: 'Notes', icon: <GearIcon />, component: <Text>Notes Placeholder</Text> },
+  { id: 'analytics', title: 'Analytics', icon: <BarChartIcon />, component: <Text>Analytics Placeholder</Text> },
+  { id: 'calendar', title: 'Calendar', icon: <PersonIcon />, component: <Text>Calendar Placeholder</Text> },
+  { id: 'notes', title: 'Notes', icon: <GearIcon />, component: <Text>Notes Placeholder</Text> },
+  { id: 'analytics', title: 'Analytics', icon: <BarChartIcon />, component: <Text>Analytics Placeholder</Text> },
 ]
 
 export default function Home() {
   return (
-    <Theme appearance="dark" accentColor="cyan" grayColor="slate" radius="large" scaling="95%">
+    <Theme appearance="dark" accentColor="cyan" grayColor="slate" radius="large" scaling="95%" className=' p-5 h-[100%] w-full'>
       <Container size="4" className="py-8">
         <Heading size="8" className="text-center mb-8">Home</Heading>
-        <Grid columns={{ initial: '1', xs: '2', sm: '3', md: '4' }} gap="4">
+        <Grid columns={{ initial: '2', xs: '3', sm: '4', md: '5' }} gap="4">
           {bentoItems.map((item) => (
             <BentoCard key={item.id} {...item} />
           ))}
